@@ -1,0 +1,92 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.20.0.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: li007 li007, wqe, LIC=GE7DL-0VMSS-UMK9A-1K110-MM33H-JZ98L
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.20
+Toolchain Path:  E:\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 2 (build 183)
+Assembler:       Armasm.exe V5.06 update 2 (build 183)
+Linker/Locator:  ArmLink.exe V5.06 update 2 (build 183)
+Library Manager: ArmAr.exe V5.06 update 2 (build 183)
+Hex Converter:   FromElf.exe V5.06 update 2 (build 183)
+CPU DLL:         SARMCM3.DLL V5.20
+Dialog DLL:      DARMSTM.DLL V1.66.0.0
+Target DLL:      coocox-agdi.dll V???
+Dialog DLL:      TARMSTM.DLL V1.65.0.0
+ 
+<h2>Project:</h2>
+H:\¾ºÈü2022\À¶ÇÅ±­Ç¶ÈëÊ½\Á·Ï°\6\CT117E-LCD\Project\CT117E-LCD.uvproj
+Project File Date:  03/19/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 2 (build 183)', folder: 'E:\keil5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling main.c...
+..\HARDWARE\RTC\rtc.h(7): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\ADC\adc.h(4): warning:  #1295-D: Deprecated declaration adc_init - give arg types
+  void adc_init();
+..\HARDWARE\ADC\adc.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\E2PROM\e2prom.h(7): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\KEY\key.h(4): warning:  #1295-D: Deprecated declaration key_led_init - give arg types
+  void key_led_init();
+..\HARDWARE\KEY\key.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\USART\usart.h(4): warning:  #1295-D: Deprecated declaration usart_init - give arg types
+  void usart_init();
+..\HARDWARE\USART\usart.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Sre\main.c(16): warning:  #1295-D: Deprecated declaration key_FNC - give arg types
+  void key_FNC();								//°´?ü¹???
+..\Sre\main.c(17): warning:  #1295-D: Deprecated declaration lcd_UI_1 - give arg types
+  void lcd_UI_1();							//Òº¾§????
+..\Sre\main.c(18): warning:  #1295-D: Deprecated declaration lcd_UI_2 - give arg types
+  void lcd_UI_2();
+..\Sre\main.c(29): warning:  #1295-D: Deprecated declaration shangbao - give arg types
+  void	shangbao();
+..\Sre\main.c(109): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  		LCD_DisplayStringLine(
+ine5 ,(char *)buf);
+..\Sre\main.c(114): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  		LCD_DisplayStringLine(
+ine7 ,(char *)buf);
+..\Sre\main.c(117): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  		LCD_DisplayStringLine(
+ine3 ,(char *)buf);
+..\Sre\main.c(125): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  		LCD_DisplayStringLine(
+ine6 ,(char *)buf);
+..\Sre\main.c(131): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  		LCD_DisplayStringLine(
+ine6 ,(char *)buf);
+..\Sre\main.c(135): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  		LCD_DisplayStringLine(
+ine6 ,(char *)buf);
+..\Sre\main.c(139): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  		LCD_DisplayStringLine(
+ine6 ,(char *)buf);
+..\Sre\main.c(155): warning:  #223-D: function "led_ctrol" declared implicitly
+  												led_ctrol(GPIO_Pin_All,1);
+..\Sre\main.c(158): warning:  #223-D: function "led_ctrol" declared implicitly
+  											else							 led_ctrol(GPIO_Pin_All,1);}
+..\Sre\main.c(159): warning:  #223-D: function "led_ctrol" declared implicitly
+  										else	led_ctrol(GPIO_Pin_All,1);
+..\Sre\main.c(162): warning:  #223-D: function "led_ctrol" declared implicitly
+  											led_ctrol(GPIO_Pin_All,1);
+..\Sre\main.c: 23 warnings, 0 errors
+linking...
+Program Size: Code=18820 RO-data=5004 RW-data=96 ZI-data=1744  
+FromELF: creating hex file...
+"..\Output\CT117E-LCD.axf" - 0 Error(s), 23 Warning(s).
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
