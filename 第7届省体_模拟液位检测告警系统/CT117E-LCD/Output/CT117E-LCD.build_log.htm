@@ -1,0 +1,80 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¶ÃVision V5.20.0.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: li007 li007, wqe, LIC=GE7DL-0VMSS-UMK9A-1K110-MM33H-JZ98L
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.20
+Toolchain Path:  E:\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 2 (build 183)
+Assembler:       Armasm.exe V5.06 update 2 (build 183)
+Linker/Locator:  ArmLink.exe V5.06 update 2 (build 183)
+Library Manager: ArmAr.exe V5.06 update 2 (build 183)
+Hex Converter:   FromElf.exe V5.06 update 2 (build 183)
+CPU DLL:         SARMCM3.DLL V5.20
+Dialog DLL:      DARMSTM.DLL V1.66.0.0
+Target DLL:      coocox-agdi.dll V???
+Dialog DLL:      TARMSTM.DLL V1.65.0.0
+ 
+<h2>Project:</h2>
+H:\match2022\¿∂«≈±≠«∂»Î Ω\¡∑œ∞\7ΩÏ °»¸\CT117E-LCD\Project\CT117E-LCD.uvproj
+Project File Date:  03/30/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 2 (build 183)', folder: 'E:\keil5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling main.c...
+..\Sre\main.c(24): warning:  #1295-D: Deprecated declaration Ui_set - give arg types
+  void Ui_set();
+..\Sre\main.c(40): warning:  #1295-D: Deprecated declaration Adc_init - give arg types
+  void 	Adc_init();
+..\Sre\main.c(41): warning:  #1295-D: Deprecated declaration Ui_main - give arg types
+  void Ui_main();
+..\Sre\main.c(42): warning:  #1295-D: Deprecated declaration Usart_init - give arg types
+  void Usart_init();
+..\Sre\main.c(48): warning:  #1295-D: Deprecated declaration Key_init - give arg types
+  void Key_init();
+..\Sre\main.c(49): warning:  #1295-D: Deprecated declaration Key_control - give arg types
+  void Key_control();
+..\Sre\main.c(94): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  LCD_DisplayStringLine(
+ine5 ,RxBuffer2);	
+..\Sre\main.c(101): warning:  #223-D: function "sprintf" declared implicitly
+  			sprintf(buff,"C:H%.0f+L%d\r\n",valu,status);
+..\Sre\main.c(106): warning:  #223-D: function "sprintf" declared implicitly
+  			sprintf(buff,"S:TL%d+TM%d+TH%d\r\n",T1,T2,T3);
+..\Sre\main.c(303): warning:  #223-D: function "sprintf" declared implicitly
+  	sprintf(buff,"   Threshold 1: %.2d",T1);
+..\Sre\main.c(304): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  	LCD_DisplayStringLine(
+ine3, buff);
+..\Sre\main.c(309): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  	LCD_DisplayStringLine(
+ine4, buff);
+..\Sre\main.c(314): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  	LCD_DisplayStringLine(
+ine5, buff);
+..\Sre\main.c(339): warning:  #223-D: function "sprintf" declared implicitly
+  			sprintf(buff,"   Height :%.0fcm",valu);
+..\Sre\main.c(340): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  		LCD_DisplayStringLine(
+ine3, buff);
+..\Sre\main.c(342): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  		LCD_DisplayStringLine(
+ine5 , buff);
+..\Sre\main.c(350): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  			LCD_DisplayStringLine(
+ine7 , buff);
+..\Sre\main.c: 17 warnings, 0 errors
+linking...
+Program Size: Code=18130 RO-data=5006 RW-data=108 ZI-data=1716  
+FromELF: creating hex file...
+"..\Output\CT117E-LCD.axf" - 0 Error(s), 17 Warning(s).
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
