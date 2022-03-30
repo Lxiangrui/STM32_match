@@ -35,6 +35,7 @@ int i;
 int status;
 float aaa;//是上电时，由于电压的突然升高不会上报
 int histroy_flag;	//用于记录前后adc
+int flag_5c,flag_5b;
 
 void Delay_Ms(u32 nTime);
 void 	Adc_init();
@@ -48,6 +49,8 @@ void x24c02_write(unsigned char address,unsigned char info);
 void Key_init();
 void Key_control();
 void led_ctrol(uint16_t GPIO_Pin,char sss);
+void led2_5c(),led3_5c();
+
 //Main Body
 int main(void)
 {
@@ -87,6 +90,11 @@ int main(void)
 	
 	while(1){
 		
+		sprintf(buff," %d",flag_5c);
+		LCD_DisplayStringLine(Line0 , buff);
+		
+		
+		
 		//Ui_main();
 		Key_control();
 	if(RX_flag == 1){
@@ -100,18 +108,51 @@ LCD_DisplayStringLine(Line5 ,RxBuffer2);
 			 
 			sprintf(buff,"C:H%.0f+L%d\r\n",valu,status);
 			Usart_send(buff);
+			
+			flag_5b = 5;
 		}
 		if(RX_char == 'S'){
 
 			sprintf(buff,"S:TL%d+TM%d+TH%d\r\n",T1,T2,T3);
 			Usart_send(buff);
+			
+			flag_5c = 5;
 		}
 	}
-	
+	led2_5c();
+	led3_5c();
 	}
 }
 
 //
+void led2_5c( ){
+			if(flag_5c > 0){
+				if(time222%400==0) flag_5c--;
+				if(time222%400<200){
+					led_ctrol(LED_all,0);
+					led_ctrol(LED2,1);
+				}
+				else{
+					led_ctrol(LED_all,0);
+					led_ctrol(LED2,0);
+				}
+				}
+}
+void led3_5c( ){
+			if(flag_5b > 0){
+				if(time222%400==200) flag_5b--;
+				if(time222%400<200){
+					led_ctrol(LED_all,0);
+					led_ctrol(LED3,1);
+				}
+				else{
+					led_ctrol(LED_all,0);
+					led_ctrol(LED3,0);
+				}
+				}
+}
+
+
 void Usart_send(char *bufff){
 //	for(i = 0 ; i<lenth ; i++){	USART_SendData( USART2, bufff[i]);
 //	}
@@ -354,34 +395,38 @@ void Ui_main(){
 				if((valu_1 - valu)  > 0.1 ){
 					sprintf(buff,"A:H%.0f+L%d+D\r\n",valu,status);
 					Usart_send(buff);
+					flag_5c = 5;
 				}
 				else if((valu_1 - valu)  < -0.1 ){
 					sprintf(buff,"A:H%.f+L%.f+U\r\n",valu,status);
-					Usart_send(buff);}
+					Usart_send(buff);
+					flag_5c = 5;
+				}
 }
-				if(status == 0){
-					led_ctrol(LED_all,0);}
-				if(status == 1){
+//				if(status == 0){
+//					led_ctrol(LED_all,0);}
+//				if(status == 1){
 					if(time222%2000<1000){
 					led_ctrol(LED_all,0);
 					led_ctrol(LED1,1);}
 				else{
 					led_ctrol(LED_all,0);
-					led_ctrol(LED1,0);}}
-				if(status == 2){
-					if(time222%400<200){
-					led_ctrol(LED_all,0);
-					led_ctrol(LED2,1);}
-				else{
-					led_ctrol(LED_all,0);
-					led_ctrol(LED2,0);}}
-				if(status == 3){
-					if(time222%400<200){
-					led_ctrol(LED_all,0);
-					led_ctrol(LED3,1);}
-				else{
-					led_ctrol(LED_all,0);
-					led_ctrol(LED3,0);}}
+					led_ctrol(LED1,0);}
+//}
+//				if(status == 2){
+//					if(time222%400<200){
+//					led_ctrol(LED_all,0);
+//					led_ctrol(LED2,1);}
+//				else{
+//					led_ctrol(LED_all,0);
+//					led_ctrol(LED2,0);}}
+//				if(status == 3){
+//					if(time222%400<200){
+//					led_ctrol(LED_all,0);
+//					led_ctrol(LED3,1);}
+//				else{
+//					led_ctrol(LED_all,0);
+//					led_ctrol(LED3,0);}}
 
 
 }
