@@ -1,0 +1,68 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.20.0.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: li007 li007, wqe, LIC=GE7DL-0VMSS-UMK9A-1K110-MM33H-JZ98L
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.20
+Toolchain Path:  E:\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 2 (build 183)
+Assembler:       Armasm.exe V5.06 update 2 (build 183)
+Linker/Locator:  ArmLink.exe V5.06 update 2 (build 183)
+Library Manager: ArmAr.exe V5.06 update 2 (build 183)
+Hex Converter:   FromElf.exe V5.06 update 2 (build 183)
+CPU DLL:         SARMCM3.DLL V5.20
+Dialog DLL:      DARMSTM.DLL V1.66.0.0
+Target DLL:      coocox-agdi.dll V???
+Dialog DLL:      TARMSTM.DLL V1.65.0.0
+ 
+<h2>Project:</h2>
+H:\match2022\蓝桥杯嵌入式\练习\第十三届省赛第一场\CT117E-LCD\Project\CT117E-LCD.uvproj
+Project File Date:  04/24/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 2 (build 183)', folder: 'E:\keil5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling main.c...
+..\HARDWARE\usart.h(4): warning:  #1295-D: Deprecated declaration Init_usart - give arg types
+  void Init_usart();
+..\HARDWARE\usart.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\key.h(12): warning:  #1295-D: Deprecated declaration Init_key - give arg types
+  void Init_key();
+..\HARDWARE\key.h(13): warning:  #1295-D: Deprecated declaration Init_led - give arg types
+  void Init_led();
+..\HARDWARE\key.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\pwm.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Sre\main.c(16): warning:  #1295-D: Deprecated declaration PSD_ui - give arg types
+  void PSD_ui();
+..\Sre\main.c(17): warning:  #1295-D: Deprecated declaration STA_ui - give arg types
+  void STA_ui();
+..\Sre\main.c(18): warning:  #1295-D: Deprecated declaration LED_Ctro - give arg types
+  void LED_Ctro();
+..\Sre\main.c(108): warning:  #223-D: function "sprintf" declared implicitly
+  	sprintf(buff,"     B 1:%c          ",Now_keyword[0]);
+..\Sre\main.c(109): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  	LCD_DisplayStringLine(
+ine4 ,buff);
+..\Sre\main.c(111): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  	LCD_DisplayStringLine(
+ine5+12 ,buff);
+..\Sre\main.c(113): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  	LCD_DisplayStringLine(
+ine6+24 ,buff);
+..\Sre\main.c: 13 warnings, 0 errors
+linking...
+Program Size: Code=12882 RO-data=4830 RW-data=80 ZI-data=1784  
+FromELF: creating hex file...
+"..\Output\CT117E-LCD.axf" - 0 Error(s), 13 Warning(s).
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
